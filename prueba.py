@@ -12,6 +12,7 @@ print("""
       `-'               `-'                             
 
 """)
+dispp = 25
 distancia = 23
 tiempo = 10
 a = distancia/(tiempo/3600)
