@@ -21,3 +21,18 @@ def cal_edad(a):
     print(edad)
 
 cal_edad(fn)
+
+print("Entre la informacion siguiente")
+print("Entre la informacion si es casado")
+casado = input("Es casado")
+#este es un if de prueba con elif and if
+"""Comentario en python"""
+if (casado == "si"):
+    print("tienes mucha suerte")
+
+elif (casado == "no"):
+    print("Deberias casarte")
+
+elif (casado == ""):\
+    print("Deberias decir algo al respecto")
+
