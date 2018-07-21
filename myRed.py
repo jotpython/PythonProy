@@ -21,7 +21,3 @@ def cal_edad(a):
     print(edad)
 
 cal_edad(fn)
-
-print("Gracias")
-if a and b and c == 10:
-    print("pepe")
