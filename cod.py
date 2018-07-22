@@ -41,7 +41,7 @@ def es_primo(numero):
         primo = False
   return primo
 
-print(es_primo(2))"""
+print(es_primo(2))
 
 # Retorna el maximo comun divisor
 
@@ -64,5 +64,19 @@ num1 = int(input("Introduce el primer numero: "))
 
 num2 = int(input("Introduce el segundo numero: "))
 
-print("El máximo común divisor de ", num1, " y ", num2, " es ", mcd(num1, num2))
+print("El máximo común divisor de ", num1, " y ", num2, " es ", mcd(num1, num2))"""
 
+
+#funcion exponente, dado un numero, devuelve el exponente en base dos mayor para ese numero.
+def expon(n):
+  exp =0
+  cal = 0
+  while (cal)<=n:
+    cal = 2 ** exp
+    if(cal<=n):
+      exp= exp + 1
+    else:
+      exp = exp - 1
+  return exp
+
+print(expon(65))
