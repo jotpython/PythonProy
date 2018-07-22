@@ -68,7 +68,7 @@ print("El máximo común divisor de ", num1, " y ", num2, " es ", mcd(num1, num2
 
 
 #funcion exponente, dado un numero, devuelve el exponente en base dos mayor para ese numero.
-def expon(n):
+"""def expon(n):
   exp =0
   cal = 0
   while (cal)<=n:
@@ -79,4 +79,20 @@ def expon(n):
       exp = exp - 1
   return exp
 
-print(expon(65))
+print(expon(65))"""
+
+#numeros pandigitales
+def panprimo(n):
+  conv = str(n)
+  aux_conv = 0
+  long = len(conv)
+  new_cad = 0
+  for i in range (long):
+    val = conv[i]
+    for j in range (10):
+      if (val == j):
+        new_cad[i] = val
+      return False
+    return True
+    print(panprimo(23))
+
