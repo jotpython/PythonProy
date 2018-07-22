@@ -86,13 +86,16 @@ def panprimo(n):
   conv = str(n)
   aux_conv = 0
   long = len(conv)
-  new_cad = 0
+  new_cad = ""
   for i in range (long):
     val = conv[i]
     for j in range (10):
-      if (val == j):
-        new_cad[i] = val
-      return False
-    return True
-    print(panprimo(23))
+      if (int(val) == j):
+        aux_conv = val
+
+
+  return True
+print(panprimo(23))
+
+print("pepe")
 
