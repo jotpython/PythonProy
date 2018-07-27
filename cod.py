@@ -83,18 +83,20 @@ print(expon(65))"""
 
 #numeros pandigitales
 def panprimo(n):
-  conv = str(n)
-  aux_conv = 0
+  conv = sorted(str(n))
+  aux_conv = ''
   long = len(conv)
   new_cad = ''
+  j = 0
   for i in range (long):
-    val = conv[i]
-    for j in range (10):
-      if (int(val) == j):
-        aux_conv = str(val)
-        new_cad = new_cad + aux_conv
+    if(conv[i]==str(j)):
+      j+=j
+      aux_conv = conv[i]
+
+
+   # elif(n//)
 
   return True
 
 
-print(panprimo(24764))
+print(panprimo(564789432103))
