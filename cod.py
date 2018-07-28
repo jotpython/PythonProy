@@ -68,7 +68,7 @@ print("El máximo común divisor de ", num1, " y ", num2, " es ", mcd(num1, num2
 
 
 #funcion exponente, dado un numero, devuelve el exponente en base dos mayor para ese numero.
-"""def expon(n):
+def expon(n):
   exp =0
   cal = 0
   while (cal)<=n:
@@ -79,6 +79,4 @@ print("El máximo común divisor de ", num1, " y ", num2, " es ", mcd(num1, num2
       exp = exp - 1
   return exp
 
-print(expon(65))"""
-
-
+print(expon(65))
