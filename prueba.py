@@ -26,6 +26,7 @@ def prueba(n):
     b = []
     long_b = len(b)
     aux = 0
+    aux_primo = int(n%1000)
 
     for i in range(long-1):
         if (a[i]=='0' and aux!=1):
@@ -42,7 +43,16 @@ def prueba(n):
     for j in range(10):
         if b[j] != str(j):
             return False
+
+    if (aux_primo < 2):
+        return False
+    elif (aux_primo == 2):
+        return True
+    else:
+        for i in range(2, aux_primo):
+            if (aux_primo % i) == 0:
+                return False
     return True
 
 
-print(prueba(81244657008976))
+print(prueba(81244657003947))
