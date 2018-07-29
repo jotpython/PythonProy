@@ -28,10 +28,11 @@ def prueba(n):
     aux = 0
 
     for i in range(long-1):
-        if (a[i]=='0' and aux !=1):
-            b.append(str(a[i]))
+        if (a[i]=='0' and aux!=1):
+            b.append(str(a[0]))
             aux = 1
         elif a[i] == a[i+1]:
+            #b.append(str(a[i+1]))
             cont = cont + 1
         else:
             b.append(str(a[i+1]))
@@ -44,4 +45,4 @@ def prueba(n):
     return True
 
 
-print(prueba(812446573008976))
+print(prueba(81244657008976))
