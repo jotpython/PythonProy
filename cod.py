@@ -27,7 +27,7 @@ temp = 32
 print("FARH    Cels")
 while (temp <=80):
     print(temp,"    ",int((temp-32)*5/9))
-    temp = temp+1
+    temp = temp+1"""
 
 def es_primo(numero):
   primo = True
@@ -41,11 +41,11 @@ def es_primo(numero):
         primo = False
   return primo
 
-print(es_primo(2))
+print(es_primo(769))
 
 # Retorna el maximo comun divisor
 
-def mcd(a, b):
+"""def mcd(a, b):
     resto = 0
 
     while (b > 0):

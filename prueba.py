@@ -19,7 +19,7 @@ a = distancia/(tiempo/3600)
 b = (distancia*1000)/tiempo
 resultado = "La velocidad es " + str(a) + " Km/h o " + str(b) + " m/s"
 print(resultado)"""
-def prueba(n):
+def panprimo(n):
     a = sorted(str(n))
     long = len(a)
     cont = 0
@@ -57,4 +57,4 @@ def prueba(n):
     return True
 
 
-print(prueba(101276765675622345787533568947))
+print(panprimo(10127676567562234587745346535787533568947))
