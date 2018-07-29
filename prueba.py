@@ -32,13 +32,15 @@ def prueba(n):
         if (a[i]=='0' and aux!=1):
             b.append(str(a[0]))
             aux = 1
-        elif a[i] == a[i+1]:
-            #b.append(str(a[i+1]))
-            cont = cont + 1
+        elif a[i]==a[i+1]:
+           # b.append(str(a[i+1]))
+                cont = cont + 1
         else:
-            b.append(str(a[i+1]))
+            b.append(str(a[i]))
             long_b = len(b)
-    if long_b<10:
+    b.append(str(a[i + 1]))
+    long_b = long_b+1
+    if long_b < 10:
         return False
     for j in range(10):
         if b[j] != str(j):
@@ -55,4 +57,4 @@ def prueba(n):
     return True
 
 
-print(prueba(81244657003947))
+print(prueba(101276765675622345787533568947))
