@@ -1,4 +1,5 @@
 from builtins import print
+from S4Red import mostrar_bienvenida
 
 print("Bienvenido a ... ")
 print("""                                                        
@@ -19,6 +20,8 @@ a = distancia/(tiempo/3600)
 b = (distancia*1000)/tiempo
 resultado = "La velocidad es " + str(a) + " Km/h o " + str(b) + " m/s"
 print(resultado)"""
+
+
 def panprimo(n):
     a = sorted(str(n))
     long = len(a)

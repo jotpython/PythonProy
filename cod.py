@@ -68,7 +68,7 @@ print("El máximo común divisor de ", num1, " y ", num2, " es ", mcd(num1, num2
 
 
 #funcion exponente, dado un numero, devuelve el exponente en base dos mayor para ese numero.
-def expon(n):
+"""def expon(n):
   exp =0
   cal = 0
   while (cal)<=n:
@@ -79,4 +79,17 @@ def expon(n):
       exp = exp - 1
   return exp
 
-print(expon(65))
+print(expon(65))"""
+
+#ordenar la palabra de atras adelante
+"""s = input("Ingresa una palabra: ")
+resultado = ""
+i = 0
+while i<len(s):
+  resultado= resultado + s[len(s)-i-1]
+  i=i+1
+print(resultado)"""
+
+s = "Acaso hubo buhos aca"
+t = s[2:9]+s[0:1]
+print(t)
