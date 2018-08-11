@@ -29,7 +29,7 @@ while (temp <=80):
     print(temp,"    ",int((temp-32)*5/9))
     temp = temp+1"""
 
-def es_primo(numero):
+'''def es_primo(numero):
   primo = True
   if(numero<2):
     return False
@@ -41,7 +41,7 @@ def es_primo(numero):
         primo = False
   return primo
 
-print(es_primo(769))
+print(es_primo(769))'''
 
 # Retorna el maximo comun divisor
 
@@ -90,6 +90,75 @@ while i<len(s):
   i=i+1
 print(resultado)"""
 
-s = "Acaso hubo buhos aca"
+"""s = "Acaso hubo buhos aca"
 t = s[2:9]+s[0:1]
 print(t)
+
+def mezclador(string_a, string_b):
+  new_word = ""
+  a = int(len(string_a))# aquí debes escribir el código de tu programa
+  b = int(len(string_b))
+  if(a<2 or b<2):
+    return False
+  new_word = string_a[0:2] + string_b[(b-2):(b)]
+  return new_word
+
+prueba = mezclador("k","j")
+print(prueba)"""
+
+'''def intercalar(string_a, string_b):
+  new_word = ""
+  a = int(len(string_a))
+  i = 0
+  while i!=a:
+    new_word = new_word + string_a[i] + string_b
+    i = i+1
+
+  return new_word'''
+#cuantas ocurrencias de 0 y 1 en un String de binarios
+'''def ocurrencias(string):
+  one = 0
+  cero = 0
+  aux_result = 0
+  a = int(len(string))
+  i = 0
+  j = 0
+  while i!=a:
+    if(int(string[i])!=0 and int(string[i])!=1):
+      return False
+    i+=1
+  while j!=a:
+    if string[j]=="0":
+      cero = cero + 1
+      j+=1
+    elif string[j]=="1":
+      one = one +int(string[j])
+      j+=1
+  aux_result = one - cero
+
+
+  return aux_result
+
+prueba = ocurrencias("010000011111111010011")
+print(prueba)'''
+
+def remover_enesimo(s, n):
+  long_s = int(len(s))
+  i=0
+  new_phrase = ""
+  if(long_s<n):
+    return False
+
+  while i!=long_s:
+    if(i == n):
+      new_phrase = new_phrase + ""
+      i = i+1
+    elif(i!=n):
+      new_phrase = new_phrase + s[i]
+      i = i+1
+
+
+  return new_phrase
+
+rem = remover_enesimo("juana",5)
+print(rem)
