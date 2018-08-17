@@ -142,7 +142,7 @@ print(prueba)"""
 prueba = ocurrencias("010000011111111010011")
 print(prueba)'''
 # esta funcion quita lo que aparezca en el string entrado segun la posicion que desee
-def remover_enesimo(s, n):
+'''def remover_enesimo(s, n):
   long_s = int(len(s))
   i=0
   new_phrase = ""
@@ -161,7 +161,7 @@ def remover_enesimo(s, n):
   return new_phrase
 
 rem = remover_enesimo("Programación", 12)
-print(rem)
+print(rem)'''
 
 #Escriba una función que reciba un string como parámetro y retorne el string, pero con cada elemento que estuviese en mayúsculas reemplazado por "$". Asuma que el string consistirá solamente de letras.
 #Por ejemplo si el string es "Viva la Vida", entonces tu función debe retornar "$iva la $ida".
@@ -182,4 +182,13 @@ print(rem)
   return new_string
 
 print(reemplazo("KetyJo1rGA"))'''
+
+
+def escribir_archivo(nombre, edad, pais):
+  archivo_usuario = open("probando.txt", "w")
+  archivo_usuario.write(nombre + "\n" + str(edad) + "\n" + pais + "\n")
+  archivo_usuario.close()
+
+
+escribir_archivo("Jorge",18,"cuba")
 
