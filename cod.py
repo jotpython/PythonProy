@@ -223,7 +223,53 @@ escribir_archivo("Jorge",18,"cuba")'''
     if cand[1] < mayor[1]:
       mayor = cand
   return mayor[0]'''
+#recorrer una lista
 
-resultados = [ ["Alfredo",20], ["Marcela",40], ["Ignacio",30], ["Loreto",10] ]
-mayoria = ganador(resultados)
-print(mayoria)
+'''tablero = [ [1,2,3], [4,5,6], [7,8,9] ]
+for i in range(3):
+  for j in range(3):
+    print(tablero[i][j],end=" ")
+print("")
+
+for i in range(9):
+  print(tablero[i%3][i//3],end=" ")
+print("")
+
+for j in range(3):
+  for i in range(3):
+    print(tablero[j][i],end=" ")
+print("")
+
+for j in range(3):
+  for i in range(3):
+    print(tablero[i][j],end=" ")
+print("")
+
+for i in range(3):
+  for j in range(3):
+    print(tablero[j][i],end=" ")'''
+
+#cuantas veces se repite un valor en la lista
+
+'''mylist = ["pepe",2,2,2,33,3,"pepe",2]
+def cuantas(elem, conjunto):
+  contador = 0
+  for e in conjunto:
+    if e == elem:
+      contador += 1
+  return contador
+
+print(cuantas(2,mylist))
+print("")
+def cuantas(elem, conjunto):
+  contador = 0
+  for k in range(len(conjunto)):
+    if conjunto[k] == elem:
+      contador += 1
+  return contador
+
+print(cuantas("pepe",mylist))'''
+
+contactos = "Marcelo, Alvaro; Elena, Karen; Jaime; Carmen"
+splitted = contactos.split(";")
+print(splitted)
