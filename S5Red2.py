@@ -87,7 +87,7 @@ def existe_archivo(ruta):
 
 def leer_usuario(nombre):
     archivo_usuario = open(nombre+".user","r")
-    nombre = archivo_usuario.readline().rstrip()
+    nombre = archivo_usuario.readline().rstrip().upper()
     edad = int(archivo_usuario.readline())
     estatura = float(archivo_usuario.readline())
     estatura_m = int(estatura)

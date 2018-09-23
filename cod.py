@@ -184,11 +184,46 @@ print(rem)'''
 print(reemplazo("KetyJo1rGA"))'''
 
 
-def escribir_archivo(nombre, edad, pais):
+'''def escribir_archivo(nombre, edad, pais):
   archivo_usuario = open("probando.txt", "w")
   archivo_usuario.write(nombre + "\n" + str(edad) + "\n" + pais + "\n")
   archivo_usuario.close()
 
 
-escribir_archivo("Jorge",18,"cuba")
+escribir_archivo("Jorge",18,"cuba")'''
 
+#lista de lista
+
+'''def ganador(votos):
+  mayor = votos[0]
+  for cand in votos:
+    if cand[1] > mayor[1]:
+      mayor = cand
+  return mayor'''
+
+'''def ganador(votos):
+  mayor = votos[0]
+  for cand in votos:
+    if cand[1] > mayor[1]:
+      mayor = cand
+  return mayor[0]'''
+
+'''def ganador(votos):
+  mayor = votos[len(votos)-1]
+  for cand in votos:
+    if cand[1] >= mayor[1]:
+      mayor = cand
+  return mayor'''
+
+#devuelve el menor
+
+'''def ganador(votos):
+  mayor = votos[0]
+  for cand in votos:
+    if cand[1] < mayor[1]:
+      mayor = cand
+  return mayor[0]'''
+
+resultados = [ ["Alfredo",20], ["Marcela",40], ["Ignacio",30], ["Loreto",10] ]
+mayoria = ganador(resultados)
+print(mayoria)
