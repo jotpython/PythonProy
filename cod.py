@@ -269,7 +269,33 @@ def cuantas(elem, conjunto):
   return contador
 
 print(cuantas("pepe",mylist))'''
+import math;
+my_lista = [2,4,9,7,65,4,5,9]
 
-contactos = "Marcelo, Alvaro; Elena, Karen; Jaime; Carmen"
-splitted = contactos.split(";")
-print(splitted)
+def  promedio_std(lista):
+    aux = len(lista)
+    suma = 0
+
+    for i in range(aux):
+        suma = suma + lista[i]
+    prom = suma/aux
+    return prom
+
+def obtenerVarianza(lista):
+    n = len(lista)
+    promedio = promedio_std(lista)
+    varianza = 0
+    for dato in lista:
+     varianza += math.pow((dato - promedio), 2)
+    return varianza / (n - 1)
+
+def obtenerDesviacion(varianza, lista):
+    if(varianza == 0):
+        varianza = obtenerVarianza(lista)
+        return math.sqrt(varianza)
+    elif(varianza > 0):
+        return math.sqrt(varianza)
+
+varrianza = obtenerVarianza(my_lista)
+desv = obtenerDesviacion(varrianza,my_lista)
+print(promedio_std(my_lista),desv)
