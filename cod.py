@@ -269,8 +269,11 @@ def cuantas(elem, conjunto):
   return contador
 
 print(cuantas("pepe",mylist))'''
+#Devuelve promedio y varianza de una lista de numeros
+
+'''my_lista = [67, 43, 79, 18, 94, 60, 95, 93, 20, 35, 99, 23, 71, 26, 18]
 import math;
-my_lista = [2,4,9,7,65,4,5,9]
+
 
 def  promedio_std(lista):
     aux = len(lista)
@@ -279,23 +282,17 @@ def  promedio_std(lista):
     for i in range(aux):
         suma = suma + lista[i]
     prom = suma/aux
-    return prom
 
-def obtenerVarianza(lista):
-    n = len(lista)
-    promedio = promedio_std(lista)
+
     varianza = 0
     for dato in lista:
-     varianza += math.pow((dato - promedio), 2)
-    return varianza / (n - 1)
+     varianza += math.pow((dato - prom), 2)
+    vresult = varianza / (aux)
 
-def obtenerDesviacion(varianza, lista):
     if(varianza == 0):
-        varianza = obtenerVarianza(lista)
-        return math.sqrt(varianza)
+        varianza = vresult
+        return (prom,math.sqrt(varianza))
     elif(varianza > 0):
-        return math.sqrt(varianza)
+        return (prom,math.sqrt(vresult))
 
-varrianza = obtenerVarianza(my_lista)
-desv = obtenerDesviacion(varrianza,my_lista)
-print(promedio_std(my_lista),desv)
+print(promedio_std(my_lista))'''
