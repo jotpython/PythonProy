@@ -296,3 +296,8 @@ def  promedio_std(lista):
         return (prom,math.sqrt(vresult))
 
 print(promedio_std(my_lista))'''
+
+def color_frecuente(lista):
+    aux = len(lista)
+    lista_aux = []
+    
