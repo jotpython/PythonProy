@@ -296,8 +296,28 @@ def  promedio_std(lista):
         return (prom,math.sqrt(vresult))
 
 print(promedio_std(my_lista))'''
-
+my_list = ["rojo","rojo","rojo","verde","azul","azul","amarillo","azul","rojo","rojo","amarillo"]
 def color_frecuente(lista):
     aux = len(lista)
-    lista_aux = []
-    
+    cazul = 0
+    crojo = 0
+    cverde = 0
+    camarillo = 0
+    lista_aux = ['azul',0,'rojo',0,'verde',0,'amarillo',0]
+    for i in range(aux):
+        if lista[i]== "azul":
+            cazul = cazul + 1
+            lista_aux[1] = cazul
+        elif lista[i]=="rojo":
+            crojo = crojo + 1
+            lista_aux[3] = crojo
+        elif lista[i] == "verde":
+            cverde = cverde + 1
+            lista_aux[5] = cverde
+        elif lista[i] == "amarillo":
+            camarillo = camarillo + 1
+            lista_aux[7] = camarillo
+    sorted(lista_aux , key = lambda lista:lista_aux[7])
+    return lista_aux
+
+print(color_frecuente(my_list))
