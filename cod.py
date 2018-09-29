@@ -296,8 +296,8 @@ def  promedio_std(lista):
         return (prom,math.sqrt(vresult))
 
 print(promedio_std(my_lista))'''
-my_list = ["rojo","rojo","rojo","verde","azul","azul","amarillo","azul","rojo","rojo","amarillo"]
-def color_frecuente(lista):
+my_list = ['verde', 'amarillo', 'verde', 'rojo', 'amarillo', 'amarillo', 'amarillo', 'azul','azul','azul','azul','azul','azul','azul','azul', 'rojo', 'verde', 'amarillo', 'rojo', 'rojo', 'verde', 'verde', 'rojo', 'amarillo', 'amarillo', 'rojo', 'amarillo', 'azul', 'amarillo', 'rojo','rojo','rojo','rojo', 'verde', 'azul', 'amarillo', 'verde']
+'''def color_frecuente(lista):
     aux = len(lista)
     cazul = 0
     crojo = 0
@@ -317,7 +317,93 @@ def color_frecuente(lista):
         elif lista[i] == "amarillo":
             camarillo = camarillo + 1
             lista_aux[7] = camarillo
-    sorted(lista_aux , key = lambda lista:lista_aux[7])
+
     return lista_aux
 
+print(color_frecuente(my_list))'''
+#Segundo problema de la tarea final
+'''Suponga que tiene una lista de colores repetidos y desordenados, estos pueden ser: azul, rojo, verde y amarillo. Desea saber cual de esos colores es el que más se repite. Escriba una función color_frecuente que reciba como argumento a una lista de strings llamada lista y retorne el string más repetido y el número de ocurrencias del mismo.
+
+Por ejemplo para la lista ['azul', 'rojo', 'verde', 'verde', 'verde', 'rojo', 'verde', 'verde', 'azul', 'amarillo', 'azul', 'azul', 'verde', 'verde', 'verde', 'amarillo', 'amarillo']
+
+Debe retornar: "verde", 8
+
+En caso de que haya varios colores con el máximo número, se retornará con la siguiente prioridad: azul, rojo, verde, amarillo. Es decir, por ejemplo si la lista es l = ['rojo', 'rojo', 'azul', azul'], la función debe retornar "azul", 2'''
+
+def color_frecuente(lista):
+
+    azul = 0
+
+    rojo = 0
+
+    verde = 0
+
+    amarillo = 0
+
+    numazul = lista.count("azul")
+
+    numrojo = lista.count("rojo")
+
+    numverde = lista.count("verde")
+
+    numamarillo = lista.count("amarillo")
+
+    m = max(numazul, numrojo, numverde, numamarillo)
+
+    if m == numazul:
+        color = "azul"
+    else:
+        if m == numrojo:
+            color = "rojo"
+        else:
+            if m == numverde:
+                color = "verde"
+            else:
+                if m == numamarillo:
+                    color = "amarillo"
+    return(color,m)
+
 print(color_frecuente(my_list))
+
+# Busca Minas 3er ejercicio de la semana 6
+
+matrix = [[' ', 'X', ' ', 'X'],['X', ' ', ' ', ' '],[' ', 'X', 'X', ' '],['X', ' ', ' ', 'X']]
+
+def buscaminas(tablero,i,j):
+
+    contador=0
+
+    for i in range(i):
+
+        for j in range(j):
+
+            if tablero[i][j]=="X":
+                contador = contador + 1
+
+            if tablero[i-1][j-1]=="X":
+                contador = contador + 1
+
+            if tablero[i-1][j]=="X":
+                contador = contador + 1
+
+            if tablero[i-1][j+1]=="X":
+                contador = contador + 1
+
+            if tablero[i][j-1]=="X":
+                contador = contador + 1
+
+            if tablero[i][j+1]=="X":
+                contador = contador + 1
+
+            if tablero[i+1][j-1]=="X":
+                contador = contador + 1
+
+            if tablero[i+1][j]=="X":
+                contador = contador + 1
+
+            if tablero[i+1][j+1]=="X":
+                contador = contador + 1
+
+    return("El numero de bombas cerca a la matriz definida es",contador)
+
+print(buscaminas(matrix,0,1))
